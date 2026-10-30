@@ -1,0 +1,15 @@
+class solution:
+    def twosum(self,nums:list[int],target:int) -> list[int]:
+        num_map={}
+        for i,num in enumerate(nums):
+            complement=target-num
+            if complement in num_map:
+                return[num_map[complement],i]
+            
+            num_map[num] = i
+nums = [2, 7, 11, 15]
+target = 9
+
+answer = solution().twosum(nums, target)
+
+print(answer)
